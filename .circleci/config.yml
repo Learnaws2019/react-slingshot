@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: npm i
       - run: npm run lint
+      - run: echo "Hello Amit"
   test:
     docker:
       - image: circleci/node:13.8.0
@@ -15,12 +16,13 @@ jobs:
       - checkout
       - run: npm i
       - run: npm run test
+      - run: echo "Hello Amit"
   analyze:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit
+      - run: echo "Hello Amit"
 
 workflows:
   my_workflow:
